@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAHa1MVVoPQh0zvBkhz1x6UWApoDc1Udvw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>380980045320</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>shop.ticket-taka.dev</string>
+	<key>PROJECT_ID</key>
+	<string>ticket-taka</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ticket-taka.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:380980045320:ios:b0709bddc592ee143093bd</string>
+</dict>
+</plist>
