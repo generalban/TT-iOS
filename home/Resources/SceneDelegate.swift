@@ -24,10 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let homeVC = UINavigationController(rootViewController: HomeViewController())
         let teamVC = UINavigationController(rootViewController: TeamViewController())
-        let calendarVC = UINavigationController(rootViewController: MyCalendarViewController(baseDate: baseDate,
-                                                                    selectedDateChanged: { [weak self] date in
-            guard self != nil else { return }
-        }))
+        let calendarVC = UINavigationController(rootViewController: MyCalendarViewController(baseDate: baseDate))
         let myVC = UINavigationController(rootViewController: MyPageViewController())
         
         tabBarVC.setViewControllers([homeVC, teamVC, calendarVC, myVC], animated: false)

@@ -1,16 +1,14 @@
 //
-//  TicketTableViewCell.swift
+//  MyCalendarViewController+TicketTableViewCell.swift
 //  home
 //
-//  Created by 반성준 on 1/19/24.
+//  Created by 오연서 on 2/8/24.
 //
 
 import UIKit
+import SnapKit
 
-import RxSwift
-import RxCocoa
-
-extension TicketTableViewController {
+extension MyCalendarViewController {
     final class TicketTableViewCell: BaseTableViewCell {
         
         // MARK: - Property
@@ -20,10 +18,6 @@ extension TicketTableViewController {
                 update()
             }
         }
-        
-        private let disposeBag = DisposeBag()
-        
-        var delegate: TicketTableViewCellDelegate? = nil
         
         // MARK: - View
         
@@ -35,8 +29,8 @@ extension TicketTableViewController {
             return view
         }()
         
-        private var ticketContentContainer: BaseControl = {
-            BaseControl()
+        private var ticketContentContainer: UIView = {
+            UIView()
         }()
         
         private var ticketColorView: UIView = {
@@ -108,7 +102,7 @@ extension TicketTableViewController {
         // MARK: - UI
         
         override func prepare() {
-            
+            backgroundColor = .clear
         }
         
         override func configureSubviews() {
@@ -219,27 +213,15 @@ extension TicketTableViewController {
                 ticketInfoContainer.isHidden = false
             case .toDo:
                 ticketInfoContainer.isHidden = false
-            default:
-                break
+            default: break
             }
             
             ticketColorView.backgroundColor = ticket.color
             nameLabel.text = ticket.code
             descriptionLabel.text = ticket.title
             statusLabel.text = ticket.status.rawValue
-            
-            dateLabel.text = dateToString(ticket.dueDate)
-            
+            dateLabel.text = dateToString(ticket.dueDate)//ticket.date
             moveIcon.isHidden = !ticket.move
-        }
-        
-        override func bindEvents() {
-            ticketContentContainer.rx
-                .controlEvent(.touchUpInside)
-                .bind(with: self) { owner, _ in
-                    owner.delegate?.ticketSelected(ticket: owner.ticket)
-                }
-                .disposed(by: disposeBag)
         }
         
         override func setSelected(_ selected: Bool, animated: Bool) {
@@ -252,21 +234,13 @@ extension TicketTableViewController {
     }
 }
 
-extension TicketTableViewController.TicketTableViewCell {
-    static func makeCell(to view: UITableView, 
-                         indexPath: IndexPath,
-                         ticket: Ticket,
-                         delegate: TicketTableViewCellDelegate) -> TicketTableViewController.TicketTableViewCell {
+extension MyCalendarViewController.TicketTableViewCell {
+    static func makeCell(to view: UITableView, indexPath: IndexPath, ticket: Ticket) -> MyCalendarViewController.TicketTableViewCell {
         guard let cell = view.dequeueReusableCell(
-            withIdentifier: TicketTableViewController.TicketTableViewCell.reuseIdentifier,
+            withIdentifier: MyCalendarViewController.TicketTableViewCell.reuseIdentifier,
             for: indexPath
-        ) as? TicketTableViewController.TicketTableViewCell else { fatalError("Cell is not registered to view....") }
+        ) as? MyCalendarViewController.TicketTableViewCell else { fatalError("Cell is not registered to view....") }
         cell.ticket = ticket
-        cell.delegate = delegate
         return cell
     }
-}
-
-protocol TicketTableViewCellDelegate {
-    func ticketSelected(ticket: Ticket)
 }

@@ -298,7 +298,7 @@ final class ResendPopupViewController: BaseViewController {
         titleLabel.text = ticket.title
         statusLabel.text = ticket.status.rawValue
         contentLabel.text = ticket.content
-        dateLabel.text = ticket.date
+        dateLabel.text = dateToString(ticket.dueDate)
         moveIcon.isHidden = !ticket.move
         if let resendComment = alert.resendComment {
             resendContentLabel.text = resendComment

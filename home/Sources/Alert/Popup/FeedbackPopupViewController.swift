@@ -349,7 +349,7 @@ final class FeedbackPopupViewController: BaseViewController {
         titleLabel.text = ticket.title
         statusLabel.text = ticket.status.rawValue
         contentLabel.text = ticket.content
-        dateLabel.text = ticket.date
+        dateLabel.text = dateToString(ticket.dueDate)
         moveIcon.isHidden = !ticket.move
         alert.feedback?.files.forEach({ text in
             let button = PaddedButton(text: text, 

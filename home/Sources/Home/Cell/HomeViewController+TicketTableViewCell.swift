@@ -221,14 +221,14 @@ extension HomeViewController {
             descriptionLabel.text = ticket.title
             statusLabel.text = ticket.status.rawValue
             
-            dateLabel.text = ticket.date
+            dateLabel.text = dateToString(ticket.dueDate)//ticket.date
             
-            // FIXME: - 색상 조건
-            if ticket.date == "11/10" {
-                dateLabel.textColor = UIColor(hexCode: "FF002E")
-            } else {
-                dateLabel.textColor = UIColor(hexCode: "545454")
-            }
+//            // FIXME: - 색상 조건
+//            if ticket.date == "11/10" {
+//                dateLabel.textColor = UIColor(hexCode: "FF002E")
+//            } else {
+//                dateLabel.textColor = UIColor(hexCode: "545454")
+//            }
             
             moveIcon.isHidden = !ticket.move
         }

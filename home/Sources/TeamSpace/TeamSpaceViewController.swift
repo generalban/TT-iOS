@@ -84,8 +84,11 @@ final class TeamSpaceViewController: BaseViewController {
         UIView()
     }()
     
-    private var calendarButton: UIImageView = {
-        UIImageView(image: UIImage(named: "icon_calendar"))
+    private var calendarButton: UIButton = {
+        let view = UIButton()
+        view.setImage(UIImage(named: "icon_calendar"), for: .normal)
+        view.tintColor = UIColor(named: "활성화 테두리")
+        return view
     }()
     
     private var scrollView: UIScrollView = {
@@ -340,6 +343,13 @@ final class TeamSpaceViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
+        calendarButton.rx
+            .controlEvent(.touchUpInside)
+                .bind(with: self) { owner, _ in
+                    owner.presentTeamCalendarViewController()
+                }
+                .disposed(by: disposeBag)
+        
         myProfileIconView.rx
             .controlEvent(.touchUpInside)
             .bind(with: self) { owner, _ in
@@ -405,6 +415,11 @@ extension TeamSpaceViewController {
     
     func presentInviteMemberViewController() {
         let viewController = MemberInviteViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func presentTeamCalendarViewController() {
+        let viewController = TeamCalendarViewController(baseDate: Date())
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

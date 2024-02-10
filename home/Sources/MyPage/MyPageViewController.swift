@@ -15,7 +15,6 @@ final class MyPageViewController: BaseViewController {
     // MARK: - Test Data
     
     private var receivedTickets: [Ticket] = Ticket.dummy
-    
     private var sentTickets: [Ticket] = Ticket.dummy
     
     // MARK: - Property

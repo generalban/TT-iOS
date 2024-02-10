@@ -144,10 +144,6 @@
 		DC6C228B2B70CB90000090C9 /* TimelineShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22852B70CB90000090C9 /* TimelineShortcuts.swift */; };
 		DC6C228C2B70CB90000090C9 /* ProjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22862B70CB90000090C9 /* ProjectInfo.swift */; };
 		DC6C228D2B70CB90000090C9 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22872B70CB90000090C9 /* ProjectViewController.swift */; };
-		DC6C22982B70CBB9000090C9 /* CalendarViewController+MyCalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22932B70CBB9000090C9 /* CalendarViewController+MyCalenderView.swift */; };
-		DC6C22992B70CBB9000090C9 /* CalendarViewController+TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22942B70CBB9000090C9 /* CalendarViewController+TopView.swift */; };
-		DC6C229A2B70CBB9000090C9 /* MyCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22952B70CBB9000090C9 /* MyCalendarViewController.swift */; };
-		DC6C229B2B70CBB9000090C9 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22972B70CBB9000090C9 /* CalendarCollectionViewCell.swift */; };
 		DC6C229E2B70CC10000090C9 /* ProjectCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C229D2B70CC10000090C9 /* ProjectCreateViewController.swift */; };
 		DC6C22A02B70CCEE000090C9 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C229F2B70CCEE000090C9 /* Day.swift */; };
 		DC6C22A22B70D0EF000090C9 /* MonthMetaDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C22A12B70D0EF000090C9 /* MonthMetaDate.swift */; };
@@ -159,6 +155,17 @@
 		DC78DABD2B71175000771363 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78DABC2B71175000771363 /* TimelineTableViewCell.swift */; };
 		DC78DABF2B71276100771363 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78DABE2B71276100771363 /* ProgressBar.swift */; };
 		DC78DAC22B71289300771363 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78DAC12B71289300771363 /* AchievementCollectionViewCell.swift */; };
+		DC7A95E02B73509F006F8ED1 /* TeamCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95DF2B73509F006F8ED1 /* TeamCalendarViewController.swift */; };
+		DC7A95E32B735181006F8ED1 /* TeamCalendarViewController+TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95E22B735181006F8ED1 /* TeamCalendarViewController+TopView.swift */; };
+		DC7A95E52B7656FC006F8ED1 /* MyCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95E42B7656FC006F8ED1 /* MyCalendarViewController.swift */; };
+		DC7A95E72B7657F4006F8ED1 /* MyCalendarViewController+TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95E62B7657F4006F8ED1 /* MyCalendarViewController+TopView.swift */; };
+		DC7A95E92B765864006F8ED1 /* MyCalendarViewController+CalendarTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95E82B765864006F8ED1 /* MyCalendarViewController+CalendarTopView.swift */; };
+		DC7A95EB2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95EA2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift */; };
+		DC7A95EF2B76F873006F8ED1 /* TeamCalendarTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95EE2B76F873006F8ED1 /* TeamCalendarTopView.swift */; };
+		DC7A95F22B76FA2B006F8ED1 /* TeamCalendarDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F12B76FA2B006F8ED1 /* TeamCalendarDateCollectionViewCell.swift */; };
+		DC7A95F42B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F32B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift */; };
+		DC7A95F62B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F52B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift */; };
+		DC7A95FA2B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F92B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift */; };
 		DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE39492B53DDCA00344C44 /* AppDelegate.swift */; };
 		DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */; };
 		DCCE39562B53DDCB00344C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCE39542B53DDCB00344C44 /* LaunchScreen.storyboard */; };
@@ -318,10 +325,6 @@
 		DC6C22852B70CB90000090C9 /* TimelineShortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineShortcuts.swift; sourceTree = "<group>"; };
 		DC6C22862B70CB90000090C9 /* ProjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfo.swift; sourceTree = "<group>"; };
 		DC6C22872B70CB90000090C9 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		DC6C22932B70CBB9000090C9 /* CalendarViewController+MyCalenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarViewController+MyCalenderView.swift"; sourceTree = "<group>"; };
-		DC6C22942B70CBB9000090C9 /* CalendarViewController+TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarViewController+TopView.swift"; sourceTree = "<group>"; };
-		DC6C22952B70CBB9000090C9 /* MyCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCalendarViewController.swift; sourceTree = "<group>"; };
-		DC6C22972B70CBB9000090C9 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC6C229D2B70CC10000090C9 /* ProjectCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCreateViewController.swift; sourceTree = "<group>"; };
 		DC6C229F2B70CCEE000090C9 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		DC6C22A12B70D0EF000090C9 /* MonthMetaDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthMetaDate.swift; sourceTree = "<group>"; };
@@ -333,6 +336,17 @@
 		DC78DABC2B71175000771363 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		DC78DABE2B71276100771363 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		DC78DAC12B71289300771363 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC7A95DF2B73509F006F8ED1 /* TeamCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCalendarViewController.swift; sourceTree = "<group>"; };
+		DC7A95E22B735181006F8ED1 /* TeamCalendarViewController+TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamCalendarViewController+TopView.swift"; sourceTree = "<group>"; };
+		DC7A95E42B7656FC006F8ED1 /* MyCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendarViewController.swift; sourceTree = "<group>"; };
+		DC7A95E62B7657F4006F8ED1 /* MyCalendarViewController+TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCalendarViewController+TopView.swift"; sourceTree = "<group>"; };
+		DC7A95E82B765864006F8ED1 /* MyCalendarViewController+CalendarTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCalendarViewController+CalendarTopView.swift"; sourceTree = "<group>"; };
+		DC7A95EA2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC7A95EE2B76F873006F8ED1 /* TeamCalendarTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCalendarTopView.swift; sourceTree = "<group>"; };
+		DC7A95F12B76FA2B006F8ED1 /* TeamCalendarDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCalendarDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC7A95F32B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamCalendarViewController+SelectionView.swift"; sourceTree = "<group>"; };
+		DC7A95F52B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamCalendarViewController+TicketPopupViewController.swift"; sourceTree = "<group>"; };
+		DC7A95F92B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCalendarViewController+TicketTableViewCell.swift"; sourceTree = "<group>"; };
 		DCCE39462B53DDCA00344C44 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE39492B53DDCA00344C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -891,34 +905,6 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
-		DC6C22912B70CBB9000090C9 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				DC6C22922B70CBB9000090C9 /* Subviews */,
-				DC6C22962B70CBB9000090C9 /* Cell */,
-				DC6C22952B70CBB9000090C9 /* MyCalendarViewController.swift */,
-			);
-			name = Calendar;
-			path = "../../../20220124/tt-ios ban/home/Sources/Calendar";
-			sourceTree = "<group>";
-		};
-		DC6C22922B70CBB9000090C9 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				DC6C22932B70CBB9000090C9 /* CalendarViewController+MyCalenderView.swift */,
-				DC6C22942B70CBB9000090C9 /* CalendarViewController+TopView.swift */,
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		DC6C22962B70CBB9000090C9 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				DC6C22972B70CBB9000090C9 /* CalendarCollectionViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		DC6C229C2B70CC10000090C9 /* ProjectCreate */ = {
 			isa = PBXGroup;
 			children = (
@@ -948,6 +934,63 @@
 			isa = PBXGroup;
 			children = (
 				DC78DAC12B71289300771363 /* AchievementCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DC7A95D62B7349F7006F8ED1 /* MyCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95D82B734A09006F8ED1 /* Subviews */,
+				DC7A95DB2B734A10006F8ED1 /* Cell */,
+				DC7A95E42B7656FC006F8ED1 /* MyCalendarViewController.swift */,
+			);
+			path = MyCalendar;
+			sourceTree = "<group>";
+		};
+		DC7A95D82B734A09006F8ED1 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95E62B7657F4006F8ED1 /* MyCalendarViewController+TopView.swift */,
+				DC7A95E82B765864006F8ED1 /* MyCalendarViewController+CalendarTopView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		DC7A95DB2B734A10006F8ED1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95EA2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift */,
+				DC7A95F92B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DC7A95DE2B734E2B006F8ED1 /* TeamCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95F02B76FA16006F8ED1 /* Cell */,
+				DC7A95E12B73512B006F8ED1 /* SubView */,
+				DC7A95DF2B73509F006F8ED1 /* TeamCalendarViewController.swift */,
+			);
+			path = TeamCalendar;
+			sourceTree = "<group>";
+		};
+		DC7A95E12B73512B006F8ED1 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95E22B735181006F8ED1 /* TeamCalendarViewController+TopView.swift */,
+				DC7A95EE2B76F873006F8ED1 /* TeamCalendarTopView.swift */,
+				DC7A95F32B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift */,
+				DC7A95F52B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		DC7A95F02B76FA16006F8ED1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95F12B76FA2B006F8ED1 /* TeamCalendarDateCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1022,16 +1065,17 @@
 				BA0872D82B56C53900EBB33F /* NewTeam */,
 				BAEBA2362B56B1D50008E787 /* TeamInvite */,
 				BAEBA1FF2B5682F40008E787 /* Team */,
-				A5661E832B5A683E00E49232 /* MyPage */,
-				A5B80FAE2B5ACD3100E0451C /* EditUserInfo */,
-				A5B80FBA2B5AECA300E0451C /* ChangePassword */,
 				A5B80FC02B5AFE5A00E0451C /* TeamSpace */,
+				DC7A95DE2B734E2B006F8ED1 /* TeamCalendar */,
+				DC6C227D2B70CB4F000090C9 /* TimelineMain */,
+				DC6E53FD2B714A0A004DFB23 /* TimelineSub */,
 				A5BC7B6D2B5C18AA00F870FF /* MemberInvite */,
 				DC6C229C2B70CC10000090C9 /* ProjectCreate */,
 				DC6C22802B70CB90000090C9 /* Project */,
-				DC6C227D2B70CB4F000090C9 /* TimelineMain */,
-				DC6E53FD2B714A0A004DFB23 /* TimelineSub */,
-				DC6C22912B70CBB9000090C9 /* Calendar */,
+				DC7A95D62B7349F7006F8ED1 /* MyCalendar */,
+				A5661E832B5A683E00E49232 /* MyPage */,
+				A5B80FAE2B5ACD3100E0451C /* EditUserInfo */,
+				A5B80FBA2B5AECA300E0451C /* ChangePassword */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1205,16 +1249,18 @@
 				A5B80FBF2B5AECF300E0451C /* ChangePasswordViewController+TextField.swift in Sources */,
 				A58D11422B6FC2A2004AE653 /* FeedbackRequestPopupViewController+UserCell.swift in Sources */,
 				BAEBA2192B56A6F00008E787 /* TeamViewController+InviteButton.swift in Sources */,
+				DC7A95F42B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift in Sources */,
 				A552F1E32B6FFF6300041192 /* RegisterSuccessViewController.swift in Sources */,
 				DC6C22A22B70D0EF000090C9 /* MonthMetaDate.swift in Sources */,
 				DC78DABB2B7114B300771363 /* AddTimelineButtonView.swift in Sources */,
+				DC7A95F62B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift in Sources */,
 				A5B80FB12B5ACF4E00E0451C /* EditUserInfoViewController+ConnectedSNSView.swift in Sources */,
 				A522D8F92B6E43DA0036CB38 /* HomeViewController+EmptyContentView.swift in Sources */,
 				A58D113F2B6FBA32004AE653 /* FeedbackRequestPopupViewController.swift in Sources */,
 				BAEBA20B2B568C470008E787 /* BaseTableViewCell.swift in Sources */,
 				DC6C228D2B70CB90000090C9 /* ProjectViewController.swift in Sources */,
+				DC7A95EF2B76F873006F8ED1 /* TeamCalendarTopView.swift in Sources */,
 				BA0872E12B5750B800EBB33F /* NewTeamViewController+NewTeamButtonView.swift in Sources */,
-				DC6C229A2B70CBB9000090C9 /* MyCalendarViewController.swift in Sources */,
 				DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */,
 				DC78DAC22B71289300771363 /* AchievementCollectionViewCell.swift in Sources */,
 				BA0872E32B5753EA00EBB33F /* NewTeamViewController+TeamIconView.swift in Sources */,
@@ -1227,9 +1273,9 @@
 				DC6C22882B70CB90000090C9 /* ProjectEditViewController.swift in Sources */,
 				A552F1EB2B700BB900041192 /* SignInViewController+MaintainButton.swift in Sources */,
 				A58D113A2B6F8D8A004AE653 /* TicketInfoContentContainer.swift in Sources */,
+				DC7A95E52B7656FC006F8ED1 /* MyCalendarViewController.swift in Sources */,
 				A58D11362B6F5D92004AE653 /* TicketContentContainer.swift in Sources */,
 				A5B80FBC2B5AECB900E0451C /* ChangePasswordViewController.swift in Sources */,
-				DC6C229B2B70CBB9000090C9 /* CalendarCollectionViewCell.swift in Sources */,
 				A5B80FC22B5AFE7200E0451C /* TeamSpaceViewController.swift in Sources */,
 				A58D114D2B6FE0F3004AE653 /* FeedbackRequestPopupViewController+AttachLinkView.swift in Sources */,
 				A5B80FC42B5B076F00E0451C /* TeamSpaceViewController+TeamMemberStackView.swift in Sources */,
@@ -1246,8 +1292,8 @@
 				A5BC7B822B5C4DA100F870FF /* TeamSpaceViewController+ProjectCollectionViewCell.swift in Sources */,
 				BAEBA2072B5684AE0008E787 /* BaseView.swift in Sources */,
 				A5B80FAB2B5AC1A500E0451C /* EditUserInfoViewController+TextField.swift in Sources */,
-				DC6C22992B70CBB9000090C9 /* CalendarViewController+TopView.swift in Sources */,
 				A552F1ED2B70127200041192 /* SignInViewController+UnderlineButton.swift in Sources */,
+				DC7A95F22B76FA2B006F8ED1 /* TeamCalendarDateCollectionViewCell.swift in Sources */,
 				DC78DAB52B71124600771363 /* ProjectCreateViewController+TextField.swift in Sources */,
 				BAEBA2132B56A02F0008E787 /* TeamViewController+CreateTeamButton.swift in Sources */,
 				A5BC7B6F2B5C18C800F870FF /* MemberInviteViewController.swift in Sources */,
@@ -1279,6 +1325,7 @@
 				A522D8F72B6E42E60036CB38 /* HomeViewController+UserContainerViewController.swift in Sources */,
 				A522D9162B6EB2A60036CB38 /* ResendRequestPopupViewController.swift in Sources */,
 				A5661E9C2B5AA29C00E49232 /* MyPageViewController+SelectionView.swift in Sources */,
+				DC7A95E02B73509F006F8ED1 /* TeamCalendarViewController.swift in Sources */,
 				A522D8F52B6E3F5F0036CB38 /* UserDefaulsWrapper.swift in Sources */,
 				A522D8FC2B6E53400036CB38 /* HomeViewController+ProejctCollectionViewCell.swift in Sources */,
 				DC6C228B2B70CB90000090C9 /* TimelineShortcuts.swift in Sources */,
@@ -1288,9 +1335,12 @@
 				DC78DABF2B71276100771363 /* ProgressBar.swift in Sources */,
 				DC6C22892B70CB90000090C9 /* Link.swift in Sources */,
 				BAEBA2092B5684B70008E787 /* BaseViewController.swift in Sources */,
+				DC7A95EB2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift in Sources */,
 				A5661E852B5A685200E49232 /* MyPageViewController.swift in Sources */,
+				DC7A95E32B735181006F8ED1 /* TeamCalendarViewController+TopView.swift in Sources */,
 				A522D9112B6EAB4F0036CB38 /* AlertPopup.swift in Sources */,
 				A5BC7B722B5C1BB800F870FF /* MemberInviteViewController+TextField.swift in Sources */,
+				DC7A95FA2B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift in Sources */,
 				A5BC7B6C2B5C165900F870FF /* IconControlComponent.swift in Sources */,
 				BAEBA2172B56A4D50008E787 /* TeamViewController+CreateTeamButtonView.swift in Sources */,
 				A5661E8C2B5A7ABE00E49232 /* TicketTableViewCell.swift in Sources */,
@@ -1300,8 +1350,8 @@
 				DC6E53FF2B715165004DFB23 /* TimelineSubViewController.swift in Sources */,
 				A58D11382B6F8D0C004AE653 /* TicketSubContentContainer.swift in Sources */,
 				BAEBA2382B56B1E90008E787 /* TeamInviteViewController.swift in Sources */,
-				DC6C22982B70CBB9000090C9 /* CalendarViewController+MyCalenderView.swift in Sources */,
 				A5BC7B6A2B5C00B400F870FF /* TeamSpaceViewController+ProfileComponentView.swift.swift in Sources */,
+				DC7A95E92B765864006F8ED1 /* MyCalendarViewController+CalendarTopView.swift in Sources */,
 				A58D11552B6FEAFF004AE653 /* RegisterViewContoller+TextField.swift in Sources */,
 				A58D112F2B6F3E7E004AE653 /* TicketPopupViewController.swift in Sources */,
 				A58D112D2B6F301E004AE653 /* TicketTableViewController+DropdownBox.swift in Sources */,
@@ -1309,6 +1359,7 @@
 				A552F1E62B7004FB00041192 /* SignInViewController.swift in Sources */,
 				DC78DABD2B71175000771363 /* TimelineTableViewCell.swift in Sources */,
 				A5661E922B5A82FF00E49232 /* UIColor+.swift in Sources */,
+				DC7A95E72B7657F4006F8ED1 /* MyCalendarViewController+TopView.swift in Sources */,
 				BA0872DA2B56C54B00EBB33F /* NewTeamViewController.swift in Sources */,
 				BAEBA2042B56844F0008E787 /* TeamViewController+TopView.swift in Sources */,
 				A58D11502B6FE703004AE653 /* RegisterViewController.swift in Sources */,
