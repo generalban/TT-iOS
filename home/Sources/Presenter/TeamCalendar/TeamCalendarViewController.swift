@@ -130,6 +130,10 @@ final class TeamCalendarViewController: BaseViewController {
         return tableViewController
     }()
     
+    private lazy var dataViewControllers: [UIViewController] = {
+            return [todoTicketTableViewController, inprogressTicketTableViewController, doneTicketTableViewController]
+        }()
+    
     
     
     // MARK: - Calendar Data Values
@@ -195,29 +199,24 @@ final class TeamCalendarViewController: BaseViewController {
             .bind(with: self, onNext: { owner, index in
                 guard let prevSelectedViewController = owner.ticketPageViewController.viewControllers?.first else { return }
                 
-                // 받은 티켓 뷰 컨트롤러로 전환
-                if prevSelectedViewController == owner.todoTicketTableViewController && index == 0 {
+                if index == 0 {
                     owner.ticketPageViewController.setViewControllers([owner.todoTicketTableViewController],
                                                                       direction: .reverse,
                                                                       animated: true)
                 }
-                // 보낸 티켓 뷰 컨트롤러로 전환
-                else if prevSelectedViewController == owner.inprogressTicketTableViewController && index == 1 {
+                else if  index == 1 {
+                    let direction: UIPageViewController.NavigationDirection = prevSelectedViewController == owner.ticketPageViewController ? .forward : .reverse
                     owner.ticketPageViewController.setViewControllers([owner.inprogressTicketTableViewController],
-                                                                      direction: .forward,
+                                                                      direction: direction,
                                                                       animated: true)
                 }
-                // 일반 티켓 뷰 컨트롤러로 전환
                 else if index == 2 {
-                    let direction: UIPageViewController.NavigationDirection = prevSelectedViewController == owner.doneTicketTableViewController ? .forward : .reverse
                     owner.ticketPageViewController.setViewControllers([owner.doneTicketTableViewController],
-                                                                      direction: direction,
+                                                                      direction: .forward,
                                                                       animated: true)
                 }
             })
             .disposed(by: disposeBag)
-
-        
     }
     
     
@@ -434,26 +433,23 @@ extension TeamCalendarViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension TeamCalendarViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController == todoTicketTableViewController {
-            return doneTicketTableViewController
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let index = dataViewControllers.firstIndex(of: viewController) else { return nil }
+        let previousIndex = index - 1
+        if previousIndex < 0 {
+            return nil
         }
-        else if viewController == doneTicketTableViewController {
-            return inprogressTicketTableViewController
-        }
-        return nil
+        return dataViewControllers[previousIndex]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if viewController == inprogressTicketTableViewController {
-            return doneTicketTableViewController
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let index = dataViewControllers.firstIndex(of: viewController) else { return nil }
+        let nextIndex = index + 1
+        if nextIndex == dataViewControllers.count {
+            return nil
         }
-        else if viewController == doneTicketTableViewController {
-            return todoTicketTableViewController
-        }
-        return nil
+        return dataViewControllers[nextIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController,
@@ -463,12 +459,12 @@ extension TeamCalendarViewController: UIPageViewControllerDelegate, UIPageViewCo
         guard let currentViewController = pageViewController.viewControllers?.first else { return }
         
         let value: Int
-        if currentViewController == inprogressTicketTableViewController {
+        if currentViewController == todoTicketTableViewController {
             value = 0
-        } else if currentViewController == doneTicketTableViewController {
-            value = 2
-        } else {
+        } else if currentViewController == inprogressTicketTableViewController {
             value = 1
+        } else {
+            value = 2
         }
         
         self.selectedTicketTypeRelay.accept(value)
@@ -482,7 +478,7 @@ extension TeamCalendarViewController: TicketTableViewControllerDelegate,TicketTa
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
+        
     }
     
     func ticketTableViewController(_ tableViewController: TicketTableViewController) -> [Ticket] {
