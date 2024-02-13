@@ -35,11 +35,11 @@ extension TeamSpaceViewController {
             }
         }
         
-        override var isSelected: Bool {
-            didSet {
-                selected()
-            }
-        }
+//        override var isSelected: Bool {
+//            didSet {
+//                selected()
+//            }
+//        }
         
         // MARK: - View
         
@@ -165,7 +165,12 @@ extension TeamSpaceViewController {
         
         func selected() {
             guard cellType != .addButton else { return }
-            dimmedView.isHidden = !isSelected
+            dimmedView.isHidden = false//!isSelected
+        }
+        
+        func canceled() {
+            guard cellType != .addButton else { return }
+            dimmedView.isHidden = true
         }
     }
 }

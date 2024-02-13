@@ -33,6 +33,8 @@ final class TeamSpaceViewController: BaseViewController {
                                           ("프로젝트2", UIImage(named: "card_color1")),
                                           ("프로젝트3", UIImage(named: "card_color2"))]
     
+    
+    
     // MARK: - Property
     
     private let disposeBag = DisposeBag()
@@ -43,9 +45,10 @@ final class TeamSpaceViewController: BaseViewController {
             .filter { $0.row != 0 } ?? []
     }
     
-    private var isProjectEditing: Bool = false
-    var isEditingTapped: Bool = false
-    var isCancledTapped: Bool = false
+    //private var isProjectEditing: Bool = false
+    private var isEditingTapped: Bool = false
+    private var isCancledTapped: Bool = false
+    private var isDeletedTapped: Bool = false
     
     // MARK: - View
     
@@ -366,33 +369,65 @@ final class TeamSpaceViewController: BaseViewController {
         
         editButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.isEditingTapped = true
-                self?.projectLabel.textColor = UIColor(hexCode: "B8BAC0")
-                self?.editButton.isHidden = true
-                self?.cancelButton.isHidden = false
-                
+                guard let self = self else { return }
+                self.isEditingTapped = true
+                self.isCancledTapped = false
+                self.isDeletedTapped = false
+                self.projectLabel.textColor = UIColor(hexCode: "B8BAC0")
+                self.editButton.isHidden = true
+                self.cancelButton.isHidden = false
+                self.deleteButton.isHidden = true
+
+                // 모든 셀의 선택 상태 초기화
+                self.projectCollectionView.indexPathsForSelectedItems?.forEach {
+                    self.projectCollectionView.deselectItem(at: $0, animated: false)
+                }
             })
             .disposed(by: disposeBag)
-        
+
         cancelButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.isEditingTapped = false
-                self?.projectLabel.textColor = UIColor(hexCode: "33315B")
-                self?.editButton.isHidden = false
-                self?.cancelButton.isHidden = true
-                self?.isCancledTapped = true
+                guard let self = self else { return }
+                self.isEditingTapped = false
+                self.isCancledTapped = true
+                self.isDeletedTapped = false
+                self.projectLabel.textColor = UIColor(hexCode: "33315B")
+                self.editButton.isHidden = false
+                self.cancelButton.isHidden = true
+                self.deleteButton.isHidden = true
+
+                // 선택된 모든 셀에 대해 선택 취소
+                self.selectedIndexPaths.forEach { indexPath in
+                    if let cell = self.projectCollectionView.cellForItem(at: indexPath) as? ProjectCollectionViewCell {
+                        cell.canceled()
+                    }
+                }
+                self.selectedIndexPaths.forEach { indexPath in
+                    self.projectCollectionView.deselectItem(at: indexPath, animated: true)
+                }
             })
             .disposed(by: disposeBag)
+
         
         deleteButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.isEditingTapped = false
-                self?.isProjectEditing = false
-                self?.projectLabel.textColor = UIColor(hexCode: "33315B")
-                self?.editButton.isHidden = false
-                self?.cancelButton.isHidden = true
-                self?.deleteButton.isHidden = true
-                //FIXME: - 선택된 cell을 삭제하는 코드
+                guard let self = self else { return }
+                self.isEditingTapped = false
+                self.isCancledTapped = false
+                self.isDeletedTapped = true
+                self.projectLabel.textColor = UIColor(hexCode: "33315B")
+                self.editButton.isHidden = false
+                self.cancelButton.isHidden = true
+                self.deleteButton.isHidden = true
+                self.selectedIndexPaths.forEach { indexPath in
+                    if let cell = self.projectCollectionView.cellForItem(at: indexPath) as? ProjectCollectionViewCell {
+                        cell.canceled()
+                    }
+                }
+                self.selectedIndexPaths.forEach { indexPath in
+                    self.projectCollectionView.deselectItem(at: indexPath, animated: true)
+                }
+                //FIXME: - 선택된 cell DELETE
             })
             .disposed(by: disposeBag)
     }
@@ -445,28 +480,21 @@ extension TeamSpaceViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as? TeamSpaceViewController.ProjectCollectionViewCell
-        
-        if indexPath.row == 0 {
+        guard indexPath.row != 0 else {
             let newViewController = ProjectCreateViewController()
             navigationController?.pushViewController(newViewController, animated: true)
+            return
+        }
+        if isEditingTapped {
+            let cell = collectionView.cellForItem(at: indexPath) as? ProjectCollectionViewCell
+            cell?.selected()
+            cellSelected(collectionView)
         } else {
-             if !isEditingTapped {             //편집 중이 아닐 때
-                let newViewController = ProjectViewController()
-                navigationController?.pushViewController(newViewController, animated: true)
-            } else { //편집 중
-                if isCancledTapped{
-                    //FIXME: 선택된 cell 체크 초기화
-                } else {
-                    cellSelected(collectionView)
-                    cell?.selected()
-                }
-                
-            }
+            let newViewController = ProjectViewController()
+            navigationController?.pushViewController(newViewController, animated: true)
         }
     }
     
-
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? TeamSpaceViewController.ProjectCollectionViewCell
         if isEditingTapped {
@@ -476,10 +504,8 @@ extension TeamSpaceViewController: UICollectionViewDelegate,
     
     func cellSelected(_ collectionView: UICollectionView){
         if !selectedIndexPaths.isEmpty {
-            isProjectEditing = true
             deleteButton.isHidden = false
         } else {
-            isProjectEditing = false
             deleteButton.isHidden = true
         }
     }

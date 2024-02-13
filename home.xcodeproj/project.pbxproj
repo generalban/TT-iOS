@@ -166,6 +166,12 @@
 		DC7A95F42B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F32B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift */; };
 		DC7A95F62B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F52B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift */; };
 		DC7A95FA2B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A95F92B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift */; };
+		DC7A96022B7B8108006F8ED1 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96012B7B8108006F8ED1 /* Get.swift */; };
+		DC7A96042B7B810D006F8ED1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96032B7B810D006F8ED1 /* Post.swift */; };
+		DC7A96062B7B8117006F8ED1 /* Patch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96052B7B8117006F8ED1 /* Patch.swift */; };
+		DC7A96082B7B811D006F8ED1 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96072B7B811D006F8ED1 /* Delete.swift */; };
+		DC7A960A2B7BB6AB006F8ED1 /* Ext + URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96092B7BB6AB006F8ED1 /* Ext + URL.swift */; };
+		DC7A960E2B7BB703006F8ED1 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A960D2B7BB703006F8ED1 /* BaseEndpoint.swift */; };
 		DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE39492B53DDCA00344C44 /* AppDelegate.swift */; };
 		DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */; };
 		DCCE39562B53DDCB00344C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCE39542B53DDCB00344C44 /* LaunchScreen.storyboard */; };
@@ -347,6 +353,12 @@
 		DC7A95F32B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamCalendarViewController+SelectionView.swift"; sourceTree = "<group>"; };
 		DC7A95F52B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamCalendarViewController+TicketPopupViewController.swift"; sourceTree = "<group>"; };
 		DC7A95F92B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCalendarViewController+TicketTableViewCell.swift"; sourceTree = "<group>"; };
+		DC7A96012B7B8108006F8ED1 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
+		DC7A96032B7B810D006F8ED1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DC7A96052B7B8117006F8ED1 /* Patch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patch.swift; sourceTree = "<group>"; };
+		DC7A96072B7B811D006F8ED1 /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
+		DC7A96092B7BB6AB006F8ED1 /* Ext + URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + URL.swift"; sourceTree = "<group>"; };
+		DC7A960D2B7BB703006F8ED1 /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
 		DCCE39462B53DDCA00344C44 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE39492B53DDCA00344C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -995,6 +1007,63 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DC7A95FB2B7B8029006F8ED1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BAEBA21B2B56A8FC0008E787 /* Common */,
+				BAEBA2052B5684870008E787 /* Base */,
+				A552F1E42B7004E800041192 /* SignIn */,
+				A58D114E2B6FE6F8004AE653 /* Register */,
+				A58D113D2B6FBA13004AE653 /* FeedbackRequest */,
+				A522D8E92B6E30630036CB38 /* Home */,
+				BA0872D82B56C53900EBB33F /* NewTeam */,
+				A522D9042B6E8E390036CB38 /* Alert */,
+				BAEBA2362B56B1D50008E787 /* TeamInvite */,
+				BAEBA1FF2B5682F40008E787 /* Team */,
+				A5B80FC02B5AFE5A00E0451C /* TeamSpace */,
+				DC7A95DE2B734E2B006F8ED1 /* TeamCalendar */,
+				DC6C227D2B70CB4F000090C9 /* TimelineMain */,
+				DC6E53FD2B714A0A004DFB23 /* TimelineSub */,
+				A5BC7B6D2B5C18AA00F870FF /* MemberInvite */,
+				DC6C229C2B70CC10000090C9 /* ProjectCreate */,
+				DC6C22802B70CB90000090C9 /* Project */,
+				DC7A95D62B7349F7006F8ED1 /* MyCalendar */,
+				A5661E832B5A683E00E49232 /* MyPage */,
+				A5B80FAE2B5ACD3100E0451C /* EditUserInfo */,
+				A5B80FBA2B5AECA300E0451C /* ChangePassword */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DC7A95FD2B7B80A7006F8ED1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A95FE2B7B80DA006F8ED1 /* Model */,
+				DC7A96002B7B80EA006F8ED1 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DC7A95FE2B7B80DA006F8ED1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A96012B7B8108006F8ED1 /* Get.swift */,
+				DC7A96032B7B810D006F8ED1 /* Post.swift */,
+				DC7A96052B7B8117006F8ED1 /* Patch.swift */,
+				DC7A96072B7B811D006F8ED1 /* Delete.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC7A96002B7B80EA006F8ED1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A96092B7BB6AB006F8ED1 /* Ext + URL.swift */,
+				DC7A960D2B7BB703006F8ED1 /* BaseEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		DCCE393D2B53DDCA00344C44 = {
 			isa = PBXGroup;
 			children = (
@@ -1055,27 +1124,8 @@
 		DCCE396F2B53DE8B00344C44 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A552F1E42B7004E800041192 /* SignIn */,
-				A58D114E2B6FE6F8004AE653 /* Register */,
-				A58D113D2B6FBA13004AE653 /* FeedbackRequest */,
-				BAEBA21B2B56A8FC0008E787 /* Common */,
-				BAEBA2052B5684870008E787 /* Base */,
-				A522D8E92B6E30630036CB38 /* Home */,
-				A522D9042B6E8E390036CB38 /* Alert */,
-				BA0872D82B56C53900EBB33F /* NewTeam */,
-				BAEBA2362B56B1D50008E787 /* TeamInvite */,
-				BAEBA1FF2B5682F40008E787 /* Team */,
-				A5B80FC02B5AFE5A00E0451C /* TeamSpace */,
-				DC7A95DE2B734E2B006F8ED1 /* TeamCalendar */,
-				DC6C227D2B70CB4F000090C9 /* TimelineMain */,
-				DC6E53FD2B714A0A004DFB23 /* TimelineSub */,
-				A5BC7B6D2B5C18AA00F870FF /* MemberInvite */,
-				DC6C229C2B70CC10000090C9 /* ProjectCreate */,
-				DC6C22802B70CB90000090C9 /* Project */,
-				DC7A95D62B7349F7006F8ED1 /* MyCalendar */,
-				A5661E832B5A683E00E49232 /* MyPage */,
-				A5B80FAE2B5ACD3100E0451C /* EditUserInfo */,
-				A5B80FBA2B5AECA300E0451C /* ChangePassword */,
+				DC7A95FD2B7B80A7006F8ED1 /* Data */,
+				DC7A95FB2B7B8029006F8ED1 /* Presenter */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1278,6 +1328,7 @@
 				A5B80FBC2B5AECB900E0451C /* ChangePasswordViewController.swift in Sources */,
 				A5B80FC22B5AFE7200E0451C /* TeamSpaceViewController.swift in Sources */,
 				A58D114D2B6FE0F3004AE653 /* FeedbackRequestPopupViewController+AttachLinkView.swift in Sources */,
+				DC7A960A2B7BB6AB006F8ED1 /* Ext + URL.swift in Sources */,
 				A5B80FC42B5B076F00E0451C /* TeamSpaceViewController+TeamMemberStackView.swift in Sources */,
 				A5B80FB92B5AE41E00E0451C /* PopupViewController.swift in Sources */,
 				A552F1E92B70051600041192 /* SignInViewController+TextField.swift in Sources */,
@@ -1298,11 +1349,13 @@
 				BAEBA2132B56A02F0008E787 /* TeamViewController+CreateTeamButton.swift in Sources */,
 				A5BC7B6F2B5C18C800F870FF /* MemberInviteViewController.swift in Sources */,
 				BAEBA2112B568F910008E787 /* TeamTableViewCell.swift in Sources */,
+				DC7A96022B7B8108006F8ED1 /* Get.swift in Sources */,
 				DC78DAB92B71138800771363 /* TimelineMainViewController.swift in Sources */,
 				A5BC7B792B5C274800F870FF /* BaseCollectionViewCell.swift in Sources */,
 				A5661E9A2B5A984700E49232 /* PaddedButton.swift in Sources */,
 				A522D9092B6E91C20036CB38 /* Alert.swift in Sources */,
 				DC6C228C2B70CB90000090C9 /* ProjectInfo.swift in Sources */,
+				DC7A96062B7B8117006F8ED1 /* Patch.swift in Sources */,
 				BAEBA2152B56A08F0008E787 /* BaseControl.swift in Sources */,
 				DC78DAB72B7112A900771363 /* ProjectEditViewController+TextField.swift in Sources */,
 				A58D113C2B6FAD0A004AE653 /* ResendPopupViewController.swift in Sources */,
@@ -1326,7 +1379,9 @@
 				A522D9162B6EB2A60036CB38 /* ResendRequestPopupViewController.swift in Sources */,
 				A5661E9C2B5AA29C00E49232 /* MyPageViewController+SelectionView.swift in Sources */,
 				DC7A95E02B73509F006F8ED1 /* TeamCalendarViewController.swift in Sources */,
+				DC7A96082B7B811D006F8ED1 /* Delete.swift in Sources */,
 				A522D8F52B6E3F5F0036CB38 /* UserDefaulsWrapper.swift in Sources */,
+				DC7A960E2B7BB703006F8ED1 /* BaseEndpoint.swift in Sources */,
 				A522D8FC2B6E53400036CB38 /* HomeViewController+ProejctCollectionViewCell.swift in Sources */,
 				DC6C228B2B70CB90000090C9 /* TimelineShortcuts.swift in Sources */,
 				A5B80FAD2B5AC44D00E0451C /* UIFont+.swift in Sources */,
@@ -1334,6 +1389,7 @@
 				DC6C228A2B70CB90000090C9 /* Achievement.swift in Sources */,
 				DC78DABF2B71276100771363 /* ProgressBar.swift in Sources */,
 				DC6C22892B70CB90000090C9 /* Link.swift in Sources */,
+				DC7A96042B7B810D006F8ED1 /* Post.swift in Sources */,
 				BAEBA2092B5684B70008E787 /* BaseViewController.swift in Sources */,
 				DC7A95EB2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift in Sources */,
 				A5661E852B5A685200E49232 /* MyPageViewController.swift in Sources */,
