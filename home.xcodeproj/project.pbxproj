@@ -172,6 +172,9 @@
 		DC7A96082B7B811D006F8ED1 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96072B7B811D006F8ED1 /* Delete.swift */; };
 		DC7A960A2B7BB6AB006F8ED1 /* Ext + URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96092B7BB6AB006F8ED1 /* Ext + URL.swift */; };
 		DC7A960E2B7BB703006F8ED1 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A960D2B7BB703006F8ED1 /* BaseEndpoint.swift */; };
+		DC7A96132B7BEDE4006F8ED1 /* CreateTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96122B7BEDE4006F8ED1 /* CreateTimelineViewController.swift */; };
+		DC7A96182B7BEF4E006F8ED1 /* CreateTimelineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96172B7BEF4E006F8ED1 /* CreateTimelineTextField.swift */; };
+		DC7A961A2B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96192B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift */; };
 		DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE39492B53DDCA00344C44 /* AppDelegate.swift */; };
 		DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */; };
 		DCCE39562B53DDCB00344C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCE39542B53DDCB00344C44 /* LaunchScreen.storyboard */; };
@@ -359,6 +362,9 @@
 		DC7A96072B7B811D006F8ED1 /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
 		DC7A96092B7BB6AB006F8ED1 /* Ext + URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + URL.swift"; sourceTree = "<group>"; };
 		DC7A960D2B7BB703006F8ED1 /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
+		DC7A96122B7BEDE4006F8ED1 /* CreateTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineViewController.swift; sourceTree = "<group>"; };
+		DC7A96172B7BEF4E006F8ED1 /* CreateTimelineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineTextField.swift; sourceTree = "<group>"; };
+		DC7A96192B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTimeline+DoneButtonView.swift"; sourceTree = "<group>"; };
 		DCCE39462B53DDCA00344C44 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE39492B53DDCA00344C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1024,6 +1030,7 @@
 				DC7A95DE2B734E2B006F8ED1 /* TeamCalendar */,
 				DC6C227D2B70CB4F000090C9 /* TimelineMain */,
 				DC6E53FD2B714A0A004DFB23 /* TimelineSub */,
+				DC7A96112B7BEDC0006F8ED1 /* CreateTimeline */,
 				A5BC7B6D2B5C18AA00F870FF /* MemberInvite */,
 				DC6C229C2B70CC10000090C9 /* ProjectCreate */,
 				DC6C22802B70CB90000090C9 /* Project */,
@@ -1062,6 +1069,24 @@
 				DC7A960D2B7BB703006F8ED1 /* BaseEndpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DC7A96112B7BEDC0006F8ED1 /* CreateTimeline */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A96142B7BEF2D006F8ED1 /* Subview */,
+				DC7A96122B7BEDE4006F8ED1 /* CreateTimelineViewController.swift */,
+			);
+			path = CreateTimeline;
+			sourceTree = "<group>";
+		};
+		DC7A96142B7BEF2D006F8ED1 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A96172B7BEF4E006F8ED1 /* CreateTimelineTextField.swift */,
+				DC7A96192B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		DCCE393D2B53DDCA00344C44 = {
@@ -1308,6 +1333,7 @@
 				A522D8F92B6E43DA0036CB38 /* HomeViewController+EmptyContentView.swift in Sources */,
 				A58D113F2B6FBA32004AE653 /* FeedbackRequestPopupViewController.swift in Sources */,
 				BAEBA20B2B568C470008E787 /* BaseTableViewCell.swift in Sources */,
+				DC7A96182B7BEF4E006F8ED1 /* CreateTimelineTextField.swift in Sources */,
 				DC6C228D2B70CB90000090C9 /* ProjectViewController.swift in Sources */,
 				DC7A95EF2B76F873006F8ED1 /* TeamCalendarTopView.swift in Sources */,
 				BA0872E12B5750B800EBB33F /* NewTeamViewController+NewTeamButtonView.swift in Sources */,
@@ -1329,6 +1355,7 @@
 				A5B80FC22B5AFE7200E0451C /* TeamSpaceViewController.swift in Sources */,
 				A58D114D2B6FE0F3004AE653 /* FeedbackRequestPopupViewController+AttachLinkView.swift in Sources */,
 				DC7A960A2B7BB6AB006F8ED1 /* Ext + URL.swift in Sources */,
+				DC7A96132B7BEDE4006F8ED1 /* CreateTimelineViewController.swift in Sources */,
 				A5B80FC42B5B076F00E0451C /* TeamSpaceViewController+TeamMemberStackView.swift in Sources */,
 				A5B80FB92B5AE41E00E0451C /* PopupViewController.swift in Sources */,
 				A552F1E92B70051600041192 /* SignInViewController+TextField.swift in Sources */,
@@ -1406,6 +1433,7 @@
 				DC6E53FF2B715165004DFB23 /* TimelineSubViewController.swift in Sources */,
 				A58D11382B6F8D0C004AE653 /* TicketSubContentContainer.swift in Sources */,
 				BAEBA2382B56B1E90008E787 /* TeamInviteViewController.swift in Sources */,
+				DC7A961A2B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift in Sources */,
 				A5BC7B6A2B5C00B400F870FF /* TeamSpaceViewController+ProfileComponentView.swift.swift in Sources */,
 				DC7A95E92B765864006F8ED1 /* MyCalendarViewController+CalendarTopView.swift in Sources */,
 				A58D11552B6FEAFF004AE653 /* RegisterViewContoller+TextField.swift in Sources */,

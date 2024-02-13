@@ -262,6 +262,14 @@ final class TimelineMainViewController: BaseViewController {
                 //FIXME: - 선택된 cell DELETE
             })
             .disposed(by: disposeBag)
+        
+        addButton.rx
+            .controlEvent(.touchUpInside)
+                .bind(with: self) { owner, _ in
+                    owner.navigationController?.pushViewController(CreateTimelineViewController(), animated: true)
+
+                }
+                .disposed(by: disposeBag)
     }
 }
 
