@@ -45,7 +45,6 @@ final class TeamSpaceViewController: BaseViewController {
             .filter { $0.row != 0 } ?? []
     }
     
-    //private var isProjectEditing: Bool = false
     private var isEditingTapped: Bool = false
     private var isCancledTapped: Bool = false
     private var isDeletedTapped: Bool = false
@@ -498,7 +497,7 @@ extension TeamSpaceViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? TeamSpaceViewController.ProjectCollectionViewCell
         if isEditingTapped {
-            cell?.selected()
+            cell?.canceled()
         }
     }
     

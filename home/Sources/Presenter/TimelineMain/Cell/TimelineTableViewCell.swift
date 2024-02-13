@@ -26,7 +26,6 @@ class TimelineTableViewCell: BaseTableViewCell {
         return view
     }()
 
-    
     private (set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "타임라인 1"
@@ -41,6 +40,14 @@ class TimelineTableViewCell: BaseTableViewCell {
         view.setImage(UIImage(named: "icon_shortcuts"), for: .normal)
         return view
     }()
+    
+    private var dimmedView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexCode: "33315B", alpha: 0.5)
+        view.layer.cornerRadius = 10
+        view.isHidden = true
+        return view
+    }()
 
     // MARK: - UI
     
@@ -50,6 +57,7 @@ class TimelineTableViewCell: BaseTableViewCell {
         contentView.addSubview(containerView)
         containerView.addSubview(titleLabel)
         containerView.addSubview(rightIconView)
+        containerView.addSubview(dimmedView)
     }
     
     override func configureConstraints() {
@@ -72,6 +80,18 @@ class TimelineTableViewCell: BaseTableViewCell {
             make.trailing.equalTo(containerView.snp.trailing).inset(10)
             make.centerY.equalToSuperview()
         }
+        
+        dimmedView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    func selected() {
+        dimmedView.isHidden = false
+    }
+    
+    func canceled() {
+        dimmedView.isHidden = true
     }
 }
 
