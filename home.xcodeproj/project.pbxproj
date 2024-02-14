@@ -179,6 +179,7 @@
 		DC7A96202B7BF73D006F8ED1 /* CreateTicket+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A961F2B7BF73D006F8ED1 /* CreateTicket+TextField.swift */; };
 		DC7A96222B7BF777006F8ED1 /* CreateTicket+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */; };
 		DC7A96242B7C53D6006F8ED1 /* CreateTicketUserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */; };
+		DC7A96262B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96252B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift */; };
 		DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE39492B53DDCA00344C44 /* AppDelegate.swift */; };
 		DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */; };
 		DCCE39562B53DDCB00344C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCE39542B53DDCB00344C44 /* LaunchScreen.storyboard */; };
@@ -373,6 +374,7 @@
 		DC7A961F2B7BF73D006F8ED1 /* CreateTicket+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTicket+TextField.swift"; sourceTree = "<group>"; };
 		DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTicket+DoneButton.swift"; sourceTree = "<group>"; };
 		DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketUserIconView.swift; sourceTree = "<group>"; };
+		DC7A96252B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTIcketViewController+PeriodView.swift"; sourceTree = "<group>"; };
 		DCCE39462B53DDCA00344C44 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE39492B53DDCA00344C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1113,6 +1115,7 @@
 				DC7A961F2B7BF73D006F8ED1 /* CreateTicket+TextField.swift */,
 				DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */,
 				DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */,
+				DC7A96252B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -1421,6 +1424,7 @@
 				A5B80FB32B5AD15E00E0451C /* EditUserInfoViewController+ChangePasswordButton.swift in Sources */,
 				A5661E902B5A819700E49232 /* Ticket.swift in Sources */,
 				A5661E982B5A8D7200E49232 /* IconComponent.swift in Sources */,
+				DC7A96262B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift in Sources */,
 				A522D90B2B6E953B0036CB38 /* AlertTableViewCell.swift in Sources */,
 				BA0872D72B56B60100EBB33F /* TeamInviteViewController+InviteCell.swift in Sources */,
 				DC6C22A02B70CCEE000090C9 /* Day.swift in Sources */,

@@ -111,6 +111,9 @@ final class CreateTicketViewController: BaseViewController {
         return label
     }()
     
+    private var periodView: PeriodView = {
+        PeriodView()
+    }()
     
     private var doneButton: DoneButton = {
         let view = DoneButton()
@@ -150,7 +153,8 @@ final class CreateTicketViewController: BaseViewController {
         super.initView()
         [backButton, scrollview].forEach { view in self.view.addSubview(view)}
         scrollview.addSubview(contentView)
-        [titleLabel,ticketLabel, ticketTextField, descriptionLabel, descriptionTextField,recipientLabel, recipientCollectionView, periodLabel, doneButton].forEach { view in contentView.addSubview(view)}
+        [titleLabel,ticketLabel, ticketTextField, descriptionLabel, descriptionTextField,
+         recipientLabel, recipientCollectionView, periodLabel, periodView, doneButton].forEach { view in contentView.addSubview(view)}
     }
     
     override func initConstraint() {
@@ -216,6 +220,12 @@ final class CreateTicketViewController: BaseViewController {
         periodLabel.snp.makeConstraints { make in
             make.top.equalTo(recipientCollectionView.snp.bottom).offset(20)
             make.leading.equalToSuperview().inset(20)
+        }
+        
+        periodView.snp.makeConstraints { make in
+            make.top.equalTo(periodLabel.snp.bottom).offset(15)
+            make.leading.equalToSuperview().inset(30)
+            make.height.equalTo(100)
         }
         
         doneButton.snp.makeConstraints { make in
