@@ -12,6 +12,10 @@ import RxCocoa
 
 final class TimelineSubViewController: BaseViewController {
     
+    // MARK: - Property
+    
+    private let disposeBag = DisposeBag()
+    
     // MARK: - View
     
     private lazy var backButton: UIButton = {
@@ -65,6 +69,14 @@ final class TimelineSubViewController: BaseViewController {
 
     override func bind() {
         super.bind()
+        
+        createTicketButton.rx
+            .controlEvent(.touchUpInside)
+                .bind(with: self) { owner, _ in
+                    owner.navigationController?.pushViewController(CreateTicketViewController(), animated: true)
+
+                }
+                .disposed(by: disposeBag)
     }
     
     

@@ -175,6 +175,10 @@
 		DC7A96132B7BEDE4006F8ED1 /* CreateTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96122B7BEDE4006F8ED1 /* CreateTimelineViewController.swift */; };
 		DC7A96182B7BEF4E006F8ED1 /* CreateTimelineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96172B7BEF4E006F8ED1 /* CreateTimelineTextField.swift */; };
 		DC7A961A2B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96192B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift */; };
+		DC7A961D2B7BF6CD006F8ED1 /* CreateTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A961C2B7BF6CD006F8ED1 /* CreateTicketViewController.swift */; };
+		DC7A96202B7BF73D006F8ED1 /* CreateTicket+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A961F2B7BF73D006F8ED1 /* CreateTicket+TextField.swift */; };
+		DC7A96222B7BF777006F8ED1 /* CreateTicket+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */; };
+		DC7A96242B7C53D6006F8ED1 /* CreateTicketUserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */; };
 		DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE39492B53DDCA00344C44 /* AppDelegate.swift */; };
 		DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */; };
 		DCCE39562B53DDCB00344C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCE39542B53DDCB00344C44 /* LaunchScreen.storyboard */; };
@@ -365,6 +369,10 @@
 		DC7A96122B7BEDE4006F8ED1 /* CreateTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineViewController.swift; sourceTree = "<group>"; };
 		DC7A96172B7BEF4E006F8ED1 /* CreateTimelineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineTextField.swift; sourceTree = "<group>"; };
 		DC7A96192B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTimeline+DoneButtonView.swift"; sourceTree = "<group>"; };
+		DC7A961C2B7BF6CD006F8ED1 /* CreateTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketViewController.swift; sourceTree = "<group>"; };
+		DC7A961F2B7BF73D006F8ED1 /* CreateTicket+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTicket+TextField.swift"; sourceTree = "<group>"; };
+		DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTicket+DoneButton.swift"; sourceTree = "<group>"; };
+		DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketUserIconView.swift; sourceTree = "<group>"; };
 		DCCE39462B53DDCA00344C44 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE39492B53DDCA00344C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1031,6 +1039,7 @@
 				DC6C227D2B70CB4F000090C9 /* TimelineMain */,
 				DC6E53FD2B714A0A004DFB23 /* TimelineSub */,
 				DC7A96112B7BEDC0006F8ED1 /* CreateTimeline */,
+				DC7A961B2B7BF6AF006F8ED1 /* CreateTicket */,
 				A5BC7B6D2B5C18AA00F870FF /* MemberInvite */,
 				DC6C229C2B70CC10000090C9 /* ProjectCreate */,
 				DC6C22802B70CB90000090C9 /* Project */,
@@ -1085,6 +1094,25 @@
 			children = (
 				DC7A96172B7BEF4E006F8ED1 /* CreateTimelineTextField.swift */,
 				DC7A96192B7BEFAC006F8ED1 /* CreateTimeline+DoneButtonView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		DC7A961B2B7BF6AF006F8ED1 /* CreateTicket */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A961E2B7BF728006F8ED1 /* Subview */,
+				DC7A961C2B7BF6CD006F8ED1 /* CreateTicketViewController.swift */,
+			);
+			path = CreateTicket;
+			sourceTree = "<group>";
+		};
+		DC7A961E2B7BF728006F8ED1 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A961F2B7BF73D006F8ED1 /* CreateTicket+TextField.swift */,
+				DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */,
+				DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -1327,12 +1355,14 @@
 				DC7A95F42B770029006F8ED1 /* TeamCalendarViewController+SelectionView.swift in Sources */,
 				A552F1E32B6FFF6300041192 /* RegisterSuccessViewController.swift in Sources */,
 				DC6C22A22B70D0EF000090C9 /* MonthMetaDate.swift in Sources */,
+				DC7A96202B7BF73D006F8ED1 /* CreateTicket+TextField.swift in Sources */,
 				DC78DABB2B7114B300771363 /* AddTimelineButtonView.swift in Sources */,
 				DC7A95F62B7700EF006F8ED1 /* TeamCalendarViewController+TicketPopupViewController.swift in Sources */,
 				A5B80FB12B5ACF4E00E0451C /* EditUserInfoViewController+ConnectedSNSView.swift in Sources */,
 				A522D8F92B6E43DA0036CB38 /* HomeViewController+EmptyContentView.swift in Sources */,
 				A58D113F2B6FBA32004AE653 /* FeedbackRequestPopupViewController.swift in Sources */,
 				BAEBA20B2B568C470008E787 /* BaseTableViewCell.swift in Sources */,
+				DC7A961D2B7BF6CD006F8ED1 /* CreateTicketViewController.swift in Sources */,
 				DC7A96182B7BEF4E006F8ED1 /* CreateTimelineTextField.swift in Sources */,
 				DC6C228D2B70CB90000090C9 /* ProjectViewController.swift in Sources */,
 				DC7A95EF2B76F873006F8ED1 /* TeamCalendarTopView.swift in Sources */,
@@ -1364,6 +1394,7 @@
 				A5BC7B772B5C272E00F870FF /* SelectIconColorViewController+ColorCollectionViewCell.swift in Sources */,
 				A58D11532B6FE78B004AE653 /* RegisterViewController+ProgressBar.swift in Sources */,
 				BAEBA2012B5683080008E787 /* TeamViewController.swift in Sources */,
+				DC7A96222B7BF777006F8ED1 /* CreateTicket+DoneButton.swift in Sources */,
 				A5BC7B7B2B5C283600F870FF /* UICollectionView+Extension.swift in Sources */,
 				A58D11462B6FCD79004AE653 /* AttachedItem.swift in Sources */,
 				DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */,
@@ -1421,6 +1452,7 @@
 				DC7A95EB2B76589B006F8ED1 /* MyCalendarCollectionViewCell.swift in Sources */,
 				A5661E852B5A685200E49232 /* MyPageViewController.swift in Sources */,
 				DC7A95E32B735181006F8ED1 /* TeamCalendarViewController+TopView.swift in Sources */,
+				DC7A96242B7C53D6006F8ED1 /* CreateTicketUserIconView.swift in Sources */,
 				A522D9112B6EAB4F0036CB38 /* AlertPopup.swift in Sources */,
 				A5BC7B722B5C1BB800F870FF /* MemberInviteViewController+TextField.swift in Sources */,
 				DC7A95FA2B770740006F8ED1 /* MyCalendarViewController+TicketTableViewCell.swift in Sources */,
