@@ -16,7 +16,7 @@ extension TeamViewController {
             let label = UILabel()
             label.text = "참여중인 팀 목록입니다."
             label.textColor = .black
-            
+            label.font = UIFont(name: "SFProDisplay-Semibold", size: 27)
             return label
         }()
         

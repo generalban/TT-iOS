@@ -53,7 +53,7 @@ extension AlertViewController {
         }()
         
         private var iconView: UIImageView = {
-           let imageView = UIImageView()
+            let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFit
             return imageView
         }()
@@ -75,29 +75,29 @@ extension AlertViewController {
         
         private var acceptButton: PaddedButton = {
             let button = PaddedButton(text: "수락",
-                         padding: .init(top: 10, left: 20, bottom: 10, right: 20),
-                         textColor: .white,
-                         backgroundColor: .point)
+                                      padding: .init(top: 10, left: 20, bottom: 10, right: 20),
+                                      textColor: .white,
+                                      backgroundColor: .point)
             button.isHidden = true
             return button
         }()
         
         private var refuseButton: PaddedButton = {
             let button = PaddedButton(text: "거절",
-                         padding: .init(top: 10, left: 20, bottom: 10, right: 20))
+                                      padding: .init(top: 10, left: 20, bottom: 10, right: 20))
             button.isHidden = true
             return button
         }()
         
         private var presentButton: PaddedButton = {
             let button = PaddedButton(text: "보기",
-                         padding: .init(top: 10, left: 20, bottom: 10, right: 20),
-                         textColor: .white,
-                         backgroundColor: .point)
+                                      padding: .init(top: 10, left: 20, bottom: 10, right: 20),
+                                      textColor: .white,
+                                      backgroundColor: .point)
             button.isHidden = true
             return button
         }()
-
+        
         
         // MARK: - UI
         
@@ -106,7 +106,7 @@ extension AlertViewController {
             super.configureSubviews()
             
             [titleLabel,
-             dateLabel, 
+             dateLabel,
              iconView,
              descriptionLabel,
              buttonStackView
