@@ -180,6 +180,7 @@
 		DC7A96222B7BF777006F8ED1 /* CreateTicket+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */; };
 		DC7A96242B7C53D6006F8ED1 /* CreateTicketUserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */; };
 		DC7A96262B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A96252B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift */; };
+		DC7A962B2B7E85A0006F8ED1 /* TimelineTicketTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A962A2B7E85A0006F8ED1 /* TimelineTicketTableviewCell.swift */; };
 		DCCE394A2B53DDCA00344C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE39492B53DDCA00344C44 /* AppDelegate.swift */; };
 		DCCE394C2B53DDCA00344C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */; };
 		DCCE39562B53DDCB00344C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCE39542B53DDCB00344C44 /* LaunchScreen.storyboard */; };
@@ -375,6 +376,7 @@
 		DC7A96212B7BF777006F8ED1 /* CreateTicket+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTicket+DoneButton.swift"; sourceTree = "<group>"; };
 		DC7A96232B7C53D6006F8ED1 /* CreateTicketUserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketUserIconView.swift; sourceTree = "<group>"; };
 		DC7A96252B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateTIcketViewController+PeriodView.swift"; sourceTree = "<group>"; };
+		DC7A962A2B7E85A0006F8ED1 /* TimelineTicketTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTicketTableviewCell.swift; sourceTree = "<group>"; };
 		DCCE39462B53DDCA00344C44 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCE39492B53DDCA00344C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCE394B2B53DDCA00344C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -945,6 +947,7 @@
 		DC6E53FD2B714A0A004DFB23 /* TimelineSub */ = {
 			isa = PBXGroup;
 			children = (
+				DC7A96272B7E82C0006F8ED1 /* Cell */,
 				DC6E53FE2B715165004DFB23 /* TimelineSubViewController.swift */,
 			);
 			path = TimelineSub;
@@ -1118,6 +1121,14 @@
 				DC7A96252B7C6ABB006F8ED1 /* CreateTIcketViewController+PeriodView.swift */,
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		DC7A96272B7E82C0006F8ED1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A962A2B7E85A0006F8ED1 /* TimelineTicketTableviewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DCCE393D2B53DDCA00344C44 = {
@@ -1483,6 +1494,7 @@
 				BA0872DA2B56C54B00EBB33F /* NewTeamViewController.swift in Sources */,
 				BAEBA2042B56844F0008E787 /* TeamViewController+TopView.swift in Sources */,
 				A58D11502B6FE703004AE653 /* RegisterViewController.swift in Sources */,
+				DC7A962B2B7E85A0006F8ED1 /* TimelineTicketTableviewCell.swift in Sources */,
 				A522D9062B6E8E470036CB38 /* AlertViewController.swift in Sources */,
 				A58D114B2B6FD99D004AE653 /* FeedbackRequestPopupViewController+DropdownMenuView.swift in Sources */,
 				A522D9002B6E64B20036CB38 /* Project.swift in Sources */,

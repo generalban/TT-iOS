@@ -23,6 +23,7 @@ extension CreateTicketViewController {
             let view = UIDatePicker()
             view.preferredDatePickerStyle = .compact
             view.datePickerMode = .date
+            view.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
             return view
         }()
         
@@ -37,8 +38,14 @@ extension CreateTicketViewController {
             let view = UIDatePicker()
             view.preferredDatePickerStyle = .compact
             view.datePickerMode = .date
+            view.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
+
             return view
         }()
+        
+        @objc
+        private func handleDatePicker(_ sender: UIDatePicker) {
+        }
         
         // MARK: - UI
         
